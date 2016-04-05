@@ -36,7 +36,9 @@
     "underscore": "^1.8.3",
     "xml2js": "^0.4.15",
     "jrpc2": "^1.0.5",
-    "material-ui" : "0.15.0-alpha.2"
+    "react-toolbox" : "^0.15.0",
+    "normalize.css": "^3.0.3",
+    "react-addons-css-transition-group": "^0.14.0"
   },
   "devDependencies": {
     "babel-core": "^6.1.19",

@@ -29,7 +29,7 @@ var dependencies = [
   'react-router',
   'underscore',
   'jrpc2',
-  'material-ui'
+  'react-toolbox'
 ];
 
 /*

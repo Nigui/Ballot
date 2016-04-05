@@ -1,9 +1,5 @@
 import React from 'react';
 import Header from './Header';
-import AppBar from 'material-ui/lib/app-bar';
-import injectTapEventPlugin from 'react-tap-event-plugin';
-
-injectTapEventPlugin();
 
  class App extends React.Component{
 

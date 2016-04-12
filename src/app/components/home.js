@@ -26,14 +26,7 @@ export default class Home extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state={
-      slideIndex: 0,
-    };
   }
-
-  handleTabChange = (value) => {
-    this.setState({slideIndex: value});
-  };
 
   static contextTypes = {
     router: React.PropTypes.object.isRequired,
@@ -57,18 +50,20 @@ export default class Home extends React.Component {
           <IDLeftCard/>
 
           <Paper style={styles.content} className="col-md-8 col-md-offset-2">
-            <Tabs
-              onChange={this.handleTabChange.bind(this)}
-              value={this.state.slideIndex}
-              >
-              <Tab label="CURRENT" value={0} style={styles.tab}>
+            <Tabs>
+              <Tab label="CURRENT" style={styles.tab}>
                 <div className="tabContent">
+                  <BallotCard />
+                  <BallotCard/>
                   <BallotCard/>
                 </div>
               </Tab>
 
-              <Tab label="OVER" value={1} style={styles.tab}>
+              <Tab label="OVER" style={styles.tab}>
                   <div className="tabContent">
+                    <BallotCard/>
+                    <BallotCard/>
+                    <BallotCard/>
                   </div>
               </Tab>
             </Tabs>

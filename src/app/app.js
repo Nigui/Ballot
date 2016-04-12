@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Router, useRouterHistory} from 'react-router';
-import AppRoutes from './AppRoutes';
+import {Router,Route,IndexRoute, useRouterHistory} from 'react-router';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import {createHashHistory} from 'history';
+import Home from './components/home';
+import Login from './components/login';
 
 
 //pour onTouchTap
@@ -11,6 +12,8 @@ injectTapEventPlugin();
 
 ReactDOM.render(
   <Router history={useRouterHistory(createHashHistory)({queryKey: false})}>
-    {AppRoutes}
+    <IndexRoute component={Login} />
+    <Route path="/home" component={Home} />
+    <Route path="/login" component={Login}/>
   </Router>
 , document.getElementById('app'));

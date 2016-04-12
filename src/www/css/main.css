@@ -1,4 +1,4 @@
-html,body, #app{
+html,body, #app, #login{
   margin: 0;
   height: 100%;
 }
@@ -25,3 +25,15 @@ html,body, #app{
   font-size: 2vh;
 
 }
+
+#login{
+  background-color: #4FC3F7;
+}
+
+#login > div {
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+
+  margin: 15vh;

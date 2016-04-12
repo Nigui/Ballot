@@ -11,6 +11,7 @@ import RaisedButton from 'material-ui/lib/raised-button';
 import RadioButton from 'material-ui/lib/radio-button';
 import RadioButtonGroup from 'material-ui/lib/radio-button-group';
 
+
 const styles = {
   header: {
     backgroundColor: "#4FC3F7",
@@ -21,9 +22,16 @@ const styles = {
   },
   actions: {
     textAlign: "right"
+  },
+  radioGroup: {
+    marginLeft: "1vw"
+  },
+  radioIcon: {
+    color: "#4FC3F7"
   }
 
 }
+
 
 export default class BallotCard extends React.Component {
 
@@ -38,9 +46,8 @@ export default class BallotCard extends React.Component {
     this.setState({expanded: expanded});
   };
 
-  handleCheckedButton(){
 
-  }
+
 
 
   render(){
@@ -53,25 +60,40 @@ export default class BallotCard extends React.Component {
           titleStyle={styles.headerTitle}
           actAsExpander={true}
           showExpandableButton={true}/>
-          <CardText expandable={true}>
+        <CardText expandable={true} actAsExpander={false} >
 
+          <RadioButtonGroup name="ballot-props" style={styles.radioGroup}>
 
-            <RadioButtonGroup name="ballot-props" onChange={this.handleCheckedButton.bind(this)}>
-              <RadioButton key={1} value="tamen quotquot" label="tamen quotquot"  onCheck={this.handleCheckedButton.bind(this)}/>
-              <RadioButton key={2} value="ut domina" label="ut domina"  onCheck={this.handleCheckedButton.bind(this)}/>
-              <RadioButton key={3} value=" et verecundum" label=" et verecundum" onCheck={this.handleCheckedButton.bind(this)}/>
-              <RadioButton key={4} value="Romani nomen" label="Romani nomen" onCheck={this.handleCheckedButton.bind(this)}/>
-            </RadioButtonGroup>
+            <RadioButton
+              value="adipiscing" label="adipiscing"
+              checkedIcon={<FontIcon className="material-icons" color={styles.radioIcon.color}>radio_button_checked</FontIcon>}
+              uncheckedIcon={<FontIcon className="material-icons" color={styles.radioIcon.color}>radio_button_unchecked</FontIcon>}/>
 
+            <RadioButton
+              value="ut domina" label="ut domina"
+              checkedIcon={<FontIcon className="material-icons" color={styles.radioIcon.color}>radio_button_checked</FontIcon>}
+              uncheckedIcon={<FontIcon className="material-icons" color={styles.radioIcon.color}>radio_button_unchecked</FontIcon>}/>
 
-          </CardText>
-          <CardActions expandable={true} style={styles.actions}>
-             <RaisedButton
-               label="Submit"
-               icon={<FontIcon className="material-icons" color="#FFFFFF">done</FontIcon>}
-               backgroundColor="#4FC3F7"
-               labelColor="#FFFFFF"/>
-          </CardActions>
+            <RadioButton
+              value=" et verecundum" label="et verecundum"
+              checkedIcon={<FontIcon className="material-icons" color={styles.radioIcon.color}>radio_button_checked</FontIcon>}
+              uncheckedIcon={<FontIcon className="material-icons" color={styles.radioIcon.color}>radio_button_unchecked</FontIcon>}/>
+
+            <RadioButton
+              value="Romani nomen" label="Romani nomen"
+              checkedIcon={<FontIcon className="material-icons" color={styles.radioIcon.color}>radio_button_checked</FontIcon>}
+              uncheckedIcon={<FontIcon className="material-icons" color={styles.radioIcon.color}>radio_button_unchecked</FontIcon>}/>
+
+          </RadioButtonGroup>
+
+        </CardText>
+        <CardActions expandable={true} style={styles.actions}>
+           <RaisedButton
+             label="Submit"
+             icon={<FontIcon className="material-icons" color="#FFFFFF">done</FontIcon>}
+             backgroundColor="#4FC3F7"
+             labelColor="#FFFFFF"/>
+        </CardActions>
       </Card>
     );
   }

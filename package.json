@@ -37,7 +37,8 @@
     "underscore": "^1.8.3",
     "xml2js": "^0.4.15",
     "jrpc2": "^1.0.5",
-    "material-ui" : "0.15.0-alpha.2"
+    "material-ui" : "0.15.0-alpha.2",
+    "bootstrap" : "v3.3.6"
   },
   "devDependencies": {
     "babel-cli": "^6.3.17",

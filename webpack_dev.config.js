@@ -70,7 +70,9 @@ const config = {
       {
         test: /\.css$/,
         loader: 'style-loader!css-loader',
-      },
+        loader: 'style!css?modules',
+        include: /flexboxgrid/
+      }
     ],
   },
   eslint: {

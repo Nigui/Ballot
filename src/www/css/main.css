@@ -1,0 +1,27 @@
+html,body, #app{
+  margin: 0;
+  height: 100%;
+}
+
+.tabContent{
+  margin: 4vh
+}
+
+.tabContent > *{
+  margin-bottom: 2vh
+}
+
+
+#idLeftCard{
+
+  text-align: center;
+  padding: 1vh 1vw;
+
+}
+
+#etherSymbol{
+
+  font-weight: bold;
+  font-size: 2vh;
+
+}
